@@ -1,0 +1,564 @@
+{
+	"info": {
+		"_postman_id": "84e00a26-ee8c-40bd-8903-d746ad03c1f7",
+		"name": "testAPI keWarung",
+		"description": "Dokumentasi keWarung API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23439944"
+	},
+	"item": [
+		{
+			"name": "getAllUsers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://kewarungservice-q5cmw4bbyq-et.a.run.app/users",
+					"protocol": "https",
+					"host": [
+						"kewarungservice-q5cmw4bbyq-et",
+						"a",
+						"run",
+						"app"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signupPost",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_user\" : \"user9\",\r\n    \"email\" : \"user9@gmail.com\",\r\n    \"password\" : \"user9\",\r\n    \"nama_toko\" : \"Toko User Ke-9\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://kewarungservice-q5cmw4bbyq-et.a.run.app/users",
+					"protocol": "https",
+					"host": [
+						"kewarungservice-q5cmw4bbyq-et",
+						"a",
+						"run",
+						"app"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUserById",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2ODY1NzIzMjIsImV4cCI6MTY4NjgzMTUyMn0.KrdbZApD8P-m99WUkHfbKPmSo4gGEoEfp8X9b89Jw4A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://kewarungservice-q5cmw4bbyq-et.a.run.app/users/LKCrKSOr75qqGGAm",
+					"protocol": "https",
+					"host": [
+						"kewarungservice-q5cmw4bbyq-et",
+						"a",
+						"run",
+						"app"
+					],
+					"path": [
+						"users",
+						"LKCrKSOr75qqGGAm"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editUserById",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2ODYxODY4MjIsImV4cCI6MTY4NjQ0NjAyMn0.9PBEVL1xy7v5BLcg5zvB0jG3bcHiCYzMos-RqEXO26c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"user111@gmail.com\", \r\n    \"password\" : \"user-112\",  \r\n    \"nama_toko\" : \"user-112\", \r\n    \"foto_toko\" : \"user-112\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://kewarungservice-q5cmw4bbyq-et.a.run.app/users/LKCrKSOr75qqGGAm",
+					"protocol": "https",
+					"host": [
+						"kewarungservice-q5cmw4bbyq-et",
+						"a",
+						"run",
+						"app"
+					],
+					"path": [
+						"users",
+						"LKCrKSOr75qqGGAm"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteUserById",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://kewarungservice-q5cmw4bbyq-et.a.run.app/users/LKCrKSOr75qqGGAm",
+					"protocol": "https",
+					"host": [
+						"kewarungservice-q5cmw4bbyq-et",
+						"a",
+						"run",
+						"app"
+					],
+					"path": [
+						"users",
+						"LKCrKSOr75qqGGAm"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllProduct",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://kewarungservice-q5cmw4bbyq-et.a.run.app/products",
+					"protocol": "https",
+					"host": [
+						"kewarungservice-q5cmw4bbyq-et",
+						"a",
+						"run",
+						"app"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addProducts",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nama_produk\": \"Nabati\",\r\n    \"harga\" : \"1000\",\r\n    \"stok\" : \"10\",\r\n    \"foto\" : \"mie.jpg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://kewarungservice-q5cmw4bbyq-et.a.run.app/products/LKCrKSOr75qqGGAm",
+					"protocol": "https",
+					"host": [
+						"kewarungservice-q5cmw4bbyq-et",
+						"a",
+						"run",
+						"app"
+					],
+					"path": [
+						"products",
+						"LKCrKSOr75qqGGAm"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getProductById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_produk\" : \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://kewarungservice-q5cmw4bbyq-et.a.run.app/products/2tQIjBP39CxslYLK",
+					"protocol": "https",
+					"host": [
+						"kewarungservice-q5cmw4bbyq-et",
+						"a",
+						"run",
+						"app"
+					],
+					"path": [
+						"products",
+						"2tQIjBP39CxslYLK"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getProductByIdUser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://kewarungservice-q5cmw4bbyq-et.a.run.app/products-users/LKCrKSOr75qqGGAm",
+					"protocol": "https",
+					"host": [
+						"kewarungservice-q5cmw4bbyq-et",
+						"a",
+						"run",
+						"app"
+					],
+					"path": [
+						"products-users",
+						"LKCrKSOr75qqGGAm"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getProductByName",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2ODY1NzIzMjIsImV4cCI6MTY4NjgzMTUyMn0.KrdbZApD8P-m99WUkHfbKPmSo4gGEoEfp8X9b89Jw4A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://kewarungservice-q5cmw4bbyq-et.a.run.app/products-name/s&LKCrKSOr75qqGGAm",
+					"protocol": "https",
+					"host": [
+						"kewarungservice-q5cmw4bbyq-et",
+						"a",
+						"run",
+						"app"
+					],
+					"path": [
+						"products-name",
+						"s&LKCrKSOr75qqGGAm"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getProductByStok",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://kewarungservice-q5cmw4bbyq-et.a.run.app/products-stock/100",
+					"protocol": "https",
+					"host": [
+						"kewarungservice-q5cmw4bbyq-et",
+						"a",
+						"run",
+						"app"
+					],
+					"path": [
+						"products-stock",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editProductById",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"harga\" : \"1\",\r\n    \"stok\" : \"2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://kewarungservice-q5cmw4bbyq-et.a.run.app/products/asdcfvghbj456789",
+					"protocol": "https",
+					"host": [
+						"kewarungservice-q5cmw4bbyq-et",
+						"a",
+						"run",
+						"app"
+					],
+					"path": [
+						"products",
+						"asdcfvghbj456789"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteProductById",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://kewarungservice-q5cmw4bbyq-et.a.run.app/products/85Za_ic9NYNv8m_5",
+					"protocol": "https",
+					"host": [
+						"kewarungservice-q5cmw4bbyq-et",
+						"a",
+						"run",
+						"app"
+					],
+					"path": [
+						"products",
+						"85Za_ic9NYNv8m_5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addOrder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tgl_order\" : \"2023-06-12\",\r\n    \"status\" : \"pending\",\r\n    \"total\" : \"100\",\r\n    \"qty\": \"1\",\r\n    \"subtotal\" : \"100\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/orders/LKCrKSOr75qqGGAm&asdcfvghbj456789",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders",
+						"LKCrKSOr75qqGGAm&asdcfvghbj456789"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllOrders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/orders",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getOrderById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/orders/-NOpXrtJ5RoIn7Xv",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders",
+						"-NOpXrtJ5RoIn7Xv"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getReport",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/report/6&2023&LKCrKSOr75qqGGAm",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"report",
+						"6&2023&LKCrKSOr75qqGGAm"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2ODYxODY4MjIsImV4cCI6MTY4NjQ0NjAyMn0.9PBEVL1xy7v5BLcg5zvB0jG3bcHiCYzMos-RqEXO26c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"user9@gmail.com\",\r\n    \"password\" : \"user9\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://kewarungservice-q5cmw4bbyq-et.a.run.app/login",
+					"protocol": "https",
+					"host": [
+						"kewarungservice-q5cmw4bbyq-et",
+						"a",
+						"run",
+						"app"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://kewarungservice-q5cmw4bbyq-et.a.run.app/logout",
+					"protocol": "https",
+					"host": [
+						"kewarungservice-q5cmw4bbyq-et",
+						"a",
+						"run",
+						"app"
+					],
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendData",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "csv_file",
+							"type": "file",
+							"src": "/C:/Users/HP/Documents/UPI/Semester_6/Bangkit2023/Capstone/kewarung-server/output/file.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080l/send/6&2023&LKCrKSOr75qqGGAm",
+					"host": [
+						"localhost"
+					],
+					"port": "8080l",
+					"path": [
+						"send",
+						"6&2023&LKCrKSOr75qqGGAm"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
